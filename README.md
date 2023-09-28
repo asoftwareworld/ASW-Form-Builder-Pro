@@ -1,38 +1,38 @@
-<h1 align="center">ASW Form Builder - Design dynamic web forms.</h1>
+<h1 align="center">ASW Form Builder PRO - Design dynamic web forms.</h1>
 
 <p align="center">
   <img src="asw.svg" alt="asw-logo" width="310px" height="100px"/>
   <br>
-  <em>ASW Form Builder helps you with rapid development and designed web forms which includes several controls
-    <br> using Angular/Angular-Material and Bootstrap.</em>
+  <i>ASW Form Builder PRO helps you with rapid development and designed web forms which includes several controls
+    <br> using Angular/Angular-Material and Bootstrap.</i>
   <br>
 </p>
 
 <p align="center">
-  <a href="https://asoftwareworld.com/#/product/free-form-builder/demo"><strong>Angular form builder demo</strong></a>
+  <a href="https://asoftwareworld.com/#/product/form-builder/demo"><strong>https://asoftwareworld.com/#/product/form-builder/demo</strong></a>
   <br>
 </p>
 
 <p align="center">
-    <a href="CONTRIBUTING.md">Contributing Guidelines</a>
-    ·
-    <a href="https://github.com/asoftwareworld/ASW-Form-Builder/issues">Submit an Issue</a>
-    ·
-    <a href="https://asoftwareworld.github.io/form-builder">Blog</a>
-    <br>
-    <br>
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/asoftwareworld/ASW-Form-Builder-Enterprise/issues">Submit an Issue</a>
+  ·
+  <a href="https://asoftwareworld.com/#/product/form-builder/demo">Blog</a>
+  <br>
+  <br>
 </p>
 
 <p align="center">
-    <a href="https://circleci.com/gh/asoftwareworld/ASW-Form-Builder">
-        <img src="https://badge.fury.io/js/%40asoftwareworld%2Fform-builder.svg" alt="CI status" />
-    </a>&nbsp;
-    <a href="https://www.npmjs.com/package/@asoftwareworld/form-builder">
-        <img src="https://circleci.com/gh/asoftwareworld/ASW-Form-Builder.svg?style=svg" alt="Asw form builder on npm" />
-    </a>&nbsp;
-    <a href="https://github.com/asoftwareworld/ASW-Form-Builder/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Discord conversation" />
-    </a>
+  <a href="https://circleci.com/gh/asoftwareworld/ASW-Form-Builder-Pro">
+    <img src="https://badge.fury.io/js/%40asoftwareworld%2Fform-builder-pro.svg" alt="CI status" />
+  </a>&nbsp;
+  <a href="https://www.npmjs.com/package/@asoftwareworld/form-builder-pro">
+    <img src="https://circleci.com/gh/asoftwareworld/form-builder.svg?style=svg" alt="Asw form builder on npm" />
+  </a>&nbsp;
+  <a href="https://github.com/asoftwareworld/ASW-Form-Builder-Enterprise/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Discord conversation" />
+  </a>
 </p>
 
 <hr>
@@ -53,34 +53,36 @@ Install `Angular Material` by running the following command:
 ng add @angular/material
 ```
 
-### Step 2: Install Bootstrap
-Install `Bootstrap` source Sass files by running the following command:
-```html
-npm install bootstrap
-```
-
-### Step 3: Install ASW Form Builder
+### Step 2: Install ASW Form Builder PRO
 Install `Form Builder` to set up in the project by running the following command:
 ```html
-npm install @asoftwareworld/form-builder
+npm install @asoftwareworld/form-builder-pro
+```
+
+### Step 3: Set the license key
+ASW Form Builder Pro will display an invalid key watermark if you do not set a license key. ASW Form Builder validates the license key without any network call. The license key for Form Builder Library is a one-time setup. You don't need to set license key for each instance of form builder you create, just need to set it statically in `main.ts` file as shown below:
+```
+import { AswLicense } from '@asoftwareworld/form-builder-pro/core';
+
+AswLicense.registerLicenseKey('your license key');
 ```
 
 ### Step 4: Import the component modules
 Import the NgModule for each component you want to use:
 
 ```
-import { AswFormBuilderModule } from '@asoftwareworld/form-builder/form-builder';
-import { AswPreviewTemplateModule } from '@asoftwareworld/form-builder/preview-template';
+import { AswFormBuilderModule } from '@asoftwareworld/form-builder-pro/form-builder';
+import { AswPreviewTemplateModule } from '@asoftwareworld/form-builder-pro/preview-template';
 // ...
 
 @NgModule({
-    imports: [
-        // shown passing global defaults (optional)
-        AswFormBuilderModule,
-        AswPreviewTemplateModule
-        ...
-    ]
-    // ...
+  imports: [
+    // shown passing global defaults (optional)
+    AswFormBuilderModule,
+    AswPreviewTemplateModule
+    ...
+  ]
+  // ...
 })
 export class AppModule {}
 ```
@@ -91,7 +93,7 @@ Including a theme is required to apply the form builder and controls design.
 You can include this theme in component `SCSS or CSS` files to not use this globally in your application.
 
 ```html
-@import '~@asoftwareworld/form-builder/theme/asw-theme.min.css';
+@import '~@asoftwareworld/form-builder-pro/theme/asw-theme.min.css';
 ```
 
 If you're using the Angular CLI, and you want to use themes globally in your application. Then you can add this to your `styles.css` or `angular.json`:
@@ -99,14 +101,14 @@ If you're using the Angular CLI, and you want to use themes globally in your app
 `styles.css or styles.scss`:
 
 ```html
-@import '~@asoftwareworld/form-builder/theme/asw-theme.min.css';
+@import '~@asoftwareworld/form-builder-pro/theme/asw-theme.min.css';
 ```
 or 
 
 `angular.json`:
 ```html
 "styles": [
-  "./node_modules/@asoftwareworld/form-builder/theme/asw-theme.min.css"
+  "./node_modules/@asoftwareworld/form-builder-pro/theme/asw-theme.min.css"
 ],
 ```
 
@@ -116,14 +118,13 @@ If you are not using the Angular CLI, you can include a theme via a `<link>` ele
 In your template, use the component selector:
 ```
 <asw-form-builder [uploadData]="jsonData1"
-    [isShowPreviewButton]="isShowPreviewButton"
-    [isShowJsonDataButton]="isShowJsonDataButton"
-    [isShowPublishButton]="isShowPublishButton"
-    (publishClick)="saveJsonData($event)" 
-    (previewClick)="previewTemplate($event)"
-    (buttonClick)="buttonClick($event)"
-    (aswModelChange)="onSelectionChange($event)">
-</asw-form-builder>
+                [isShowPreviewButton]="isShowPreviewButton"
+                [isShowJsonDataButton]="isShowJsonDataButton"
+                [isShowPublishButton]="isShowPublishButton"
+                (publishClick)="saveJsonData($event)" 
+                (previewClick)="previewTemplate($event)"
+                (buttonClick)="buttonClick($event)"
+                (aswModelChange)="onSelectionChange($event)"></asw-form-builder>
 ```
 Preview Template, use the component selector in your HTML page:
 ```
@@ -164,7 +165,13 @@ export class AppComponent {
         console.log(control);
     }
 }
+
 ```
+
+## ASW Form Builder PRO Documentation
+[Get Started](https://asoftwareworld.com/#/product/form-builder/get-started) <br>
+[API](https://asoftwareworld.com/#/product/form-builder/api)
+
 ## Theme
 Angular Material [more information](https://material.angular.io/components/categories) 
 and Bootstrap [more information](https://getbootstrap.com/docs/4.0/getting-started/theming/)
@@ -209,7 +216,7 @@ We use GitHub Issues as the official bug tracker for the ASW Form Builder. Here 
 If you have questions or need help please email `asoftwareworld@gmail.com`
 
 ## License
-[MIT](https://github.com/asoftwareworld/ASW-Form-Builder/blob/master/LICENSE)
+ASW License (A Software World)
 
 ## Social Media
 
@@ -223,6 +230,3 @@ Facebook: <https://www.facebook.com/asoftwaresworld>
 
 **Love ASW Form Builder? Give our repo a star :star: :arrow_up:.**
 
-## Donate
-<a href="https://ko-fi.com/anishsharma"><img src="blue.svg" height="40"></a>  
-If this project help you reduce time to develop, you can give me a cup of coffee :)
