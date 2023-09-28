@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://asoftwareworld.com/#/product/form-builder/demo"><strong>https://asoftwareworld.com/#/product/form-builder/demo</strong></a>
+  <a href="https://asoftwareworld.com/product/form-builder/demo"><strong>https://asoftwareworld.com/product/form-builder/demo</strong></a>
   <br>
 </p>
 
@@ -18,7 +18,7 @@
   ·
   <a href="https://github.com/asoftwareworld/ASW-Form-Builder-Enterprise/issues">Submit an Issue</a>
   ·
-  <a href="https://asoftwareworld.com/#/product/form-builder/demo">Blog</a>
+  <a href="https://asoftwareworld.com/product/form-builder/demo">Blog</a>
   <br>
   <br>
 </p>
@@ -27,11 +27,8 @@
   <a href="https://circleci.com/gh/asoftwareworld/ASW-Form-Builder-Pro">
     <img src="https://badge.fury.io/js/%40asoftwareworld%2Fform-builder-pro.svg" alt="CI status" />
   </a>&nbsp;
-  <a href="https://www.npmjs.com/package/@asoftwareworld/form-builder-pro">
-    <img src="https://circleci.com/gh/asoftwareworld/form-builder.svg?style=svg" alt="Asw form builder on npm" />
-  </a>&nbsp;
-  <a href="https://github.com/asoftwareworld/ASW-Form-Builder-Enterprise/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Discord conversation" />
+  <a href="https://github.com/asoftwareworld/ASW-Form-Builder-Pro/blob/master/LICENSE">
+    <img src="license-ASW-blue.svg" alt="Discord conversation" />
   </a>
 </p>
 
@@ -169,8 +166,8 @@ export class AppComponent {
 ```
 
 ## ASW Form Builder PRO Documentation
-[Get Started](https://asoftwareworld.com/#/product/form-builder/get-started) <br>
-[API](https://asoftwareworld.com/#/product/form-builder/api)
+[Get Started](https://asoftwareworld.com/product/form-builder/get-started) <br>
+[API](https://asoftwareworld.com/product/form-builder/api)
 
 ## Theme
 Angular Material [more information](https://material.angular.io/components/categories) 
@@ -226,7 +223,7 @@ LinkedIn: <https://in.linkedin.com/company/asoftwareworld>
 
 Facebook: <https://www.facebook.com/asoftwaresworld>
 
-(https://github.com/asoftwareworld/ASW-Form-Builder)
+(https://github.com/asoftwareworld/ASW-Form-Builder-Pro)
 
 **Love ASW Form Builder? Give our repo a star :star: :arrow_up:.**
 
